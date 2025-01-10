@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header-footer.css">
+    <link rel="stylesheet" href="/css/catalog.css">
+    <title>Каталог | GarantMotors</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo"><a href="index.html"><img src="/img/logo.svg" width="50" height="50"></a><span>GarantMotors</span></div>
+      <nav>
+        <ul>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="/pages/support.html">Поддержка</a></li>
+          <li><a href="/pages/aboutUs.html">Про нас</a></li>
+          <li><a href="/pages/news.html">Новости</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Каталог автомобилей</h1>
+      <div class="searchcourses">
+        <!-- Строка поиска -->
+        <div class="search" >
+          <input type="text" placeholder="Поиск автомобилей...">
+        </div>
+      </div>
+
+      <!-- Фильтры -->
+      <section class="filters">
+        <!-- Марки авто -->
+        <div class="filter">
+          <p style="font-weight: bold;">Марки автомобилей</p>
+          <table class="category-table">
+            <tr>
+              <td><input type="checkbox" id="bmw" name="category"><label for="bmw">BMW</label></td>
+              <td><input type="checkbox" id="mercedes" name="category"><label for="mercedes">Mercedes</label></td>
+              <td><input type="checkbox" id="kia" name="category"><label for="kia">KIA</label></td>
+              <td><input type="checkbox" id="audi" name="category"><label for="audi">AUDI</label></td>
+              <td><input type="checkbox" id="skoda" name="category"><label for="skoda">Skoda</label></td>
+              <td><input type="checkbox" id="lada" name="category"><label for="lada">Lada</label></td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Период владения -->
+        <div class="filter">
+          <p style="font-weight: bold;">Период владения</p>
+          <input type="range" min="1" max="24" step="1" value="0" name="duration">
+          <p>1 - 24 месяца</p>
+        </div>
+
+        <!-- Цена -->
+        <div class="filter">
+          <p style="font-weight: bold;">Цена</p>
+          <select name="price">
+            <option value="any">Любая</option>
+            <option value="low">Низкая</option>
+            <option value="average">Рыночная</option>
+            <option value="high">Высокая</option>
+          </select>
+        </div>
+      </section>
+
+      <button class="buttonTop" onclick="topFunction()" id="myBtn" title="Go to top">Наверх</button>
+
+      <!-- Каталог автомобилей -->
+      <section class="objects">
+        <div class="object">
+          <a href="/pages/cart.html"><img src="/img/bmw_e36_1.png" alt="Авто 1"></a>
+          <h2 class="brand"><a href="/pages/cart.html">BMW 3-series E36</a></h2>
+          <p>Станьте владельцем легендарной BMW 3 Series E36, окунитесь в мир драйва и утонченного стиля. 
+            Этот автомобиль сочетает в себе культовый дизайн, мощность и комфорт, 
+            создавая идеальный баланс для любителей удовольствия от вождения.</p>
+          <p>Период владения: 14 месяцев</p>
+          <p>Цена: 1 550 000 рублей</p>
+        </div>
+
+        <div class="object">
+          <a href="/pages/cart.html"><img src="/img/mercedes_e63s_1.png" alt="Авто 2"></a>
+          <h2 class="brand"><a href="/pages/cart.html">Mercedes-Benz E63S</a></h2>
+          <p>Станьте обладателем Mercedes-Benz E63S — воплощения мощности и элегантности. 
+            Этот автомобиль создан для тех, кто ценит динамику, роскошь и современные технологии. 
+            Он поднимет ваш опыт вождения на новый уровень, соединяя стиль и производительность.</p>
+          <p>Период владения: 4 месяца</p>
+          <p>Цена: 3 870 000 рублей</p>
+        </div>
+
+        <div class="object">
+          <a href="/pages/cart.html"><img src="/img/mercedes_e_w213.png" alt="Авто 3"></a>
+          <h2 class="brand">Mercedes-Benz E-class W213</h2>
+          <p>Откройте для себя Mercedes-Benz E-Class W213 — сочетание современного дизайна, инновационных 
+            технологий и исключительного комфорта. Этот автомобиль задает новый стандарт для бизнес-класса, 
+            обеспечивая удовольствие от вождения и статус в каждой детали.</p>
+          <p>Период владения: 8 месяцeв</p>
+          <p>Цена: 2 700 000 рублей</p>
+        </div>
+
+        <div class="object">
+          <a href="/pages/cart.html"><img src="/img/kia_k5.png" alt="Авто 4"></a>
+          <h2 class="brand">KIA k5</h2>
+          <p>Познакомьтесь с KIA K5 — стильным и мощным седаном, который сочетает в себе динамичность, 
+            комфорт и современные технологии. Этот автомобиль подарит вам уверенность на дороге и станет 
+            идеальным выбором для тех, кто ценит комфорт и производительность.</p>
+          <p>Период владения: 10 месяцeв</p>
+          <p>Цена: 2 130 000 рублей</p>
+        </div>
+
+        <div class="object">
+          <a href="/pages/cart.html"><img src="/img/audi_tt.png" alt="Авто 5"></a>
+          <h2 class="brand">AUDI TT</h2>
+          <p>Откройте для себя AUDI TT — компактный спортивный автомобиль, который сочетает в себе динамику, 
+            элегантность и инновационные технологии. С его помощью вы получите незабываемые ощущения от 
+            вождения и подчеркнете свой стиль и статус на дороге.</p>
+          <p>Период владения: 5 месяцeв</p>
+          <p>Цена: 3 130 000 рублей</p>
+        </div>
+
+        <div class="object">
+          <a href="/pages/cart.html"><img src="/img/lada_aura.png" alt="Авто 6"></a>
+          <h2 class="brand">Lada aura</h2>
+          <p>Lada Aura — это премиум класс автомобиля российского автопрома, который сочетает в себе стиль, 
+            комфорт и передовые технологии. Lada Aura предоставляет владельцам уникальное сочетание 
+            элегантности и доступности в рамках российского автопроизводства.
+          </p>
+          <p>Период владения: 16 месяцeв</p>
+          <p>Цена: 1 300 000 рублей</p>
+        </div>
+
+        <div class="object">
+          <a href="/pages/cart.html"><img src="/img/skoda_octavia.png" alt="Авто 6"></a>
+          <h2 class="brand">Skoda Octavia</h2>
+          <p>Skoda Octavia — это надежный и стильный автомобиль, который сочетает в себе просторный салон, 
+            экономичность и отличную динамику. Он идеально подходит для тех, кто ценит комфорт и высокое качество по разумной цене. 
+            Skoda Octavia — это практичный выбор для ежедневных поездок и дальних путешествий.</p>
+          <p>Период владения: 14 месяцeв</p>
+          <p>Цена: 1 690 000 рублей</p>
+        </div>
+        
+        <div class="object">
+          <a href="/pages/cart.html"><img src="/img/lada_vesta_cross.png" alt="Авто 6"></a>
+          <h2 class="brand">Lada Vesta Cross</h2>
+          <p>Lada Vesta Cross — это кроссовер, который сочетает в себе динамичность, проходимость и комфорт. 
+            С его стильным дизайном и повышенной проходимостью, он идеально подходит для тех, кто ищет универсальный 
+            автомобиль для города и легких внедорожных поездок.</p>
+          <p>Период владения: 9 месяцeв</p>
+          <p>Цена: 1 490 000 рублей</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot">
+        <p style="font-weight: bold;">Контакты</p>
+        <p>Адрес: улица, город, страна</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+        <p>Email: info@example.com</p>
+      </div>
+      <div class="foot">
+        <p style="font-weight: bold;">Социальные сети</p>
+        <ul>
+          <li><a href="#">VK</a></li>
+          <li><a href="#">Telegram</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <p style="font-weight: bold;">Рабочее время</p>
+        <p>Пн-Пт: 9:00 - 20:00</p>
+        <p>Сб-Вс: выходной</p>
+      </div>
+    </footer>
+  </body>
+
+  <script src="/js/filters.js"></script>
+  <script src="/js/button.js"></script>
+
+</html>
+

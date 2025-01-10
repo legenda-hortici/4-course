@@ -1,0 +1,138 @@
+.search {
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    max-width: 1350px;
+}
+
+h1 {
+    flex: 0 0 auto;
+    font-size: 34px;
+    gap: 20px;
+    align-items: flex-start; /* Выравнивание элементов по верхнему краю */
+    max-width: 1350px; /* Ограничиваем ширину контейнера */
+    margin: 0 auto; /* Центрируем контейнер */
+}
+
+.search input {
+    width: 100%;
+    padding: 15px; 
+    font-size: 16px;
+    max-width: 1320px;
+}
+
+.filters {
+    display: flex; /* Устанавливает Flexbox для секции */
+    flex: 3;
+    /* align-items: space-between; Центрирует содержимое по горизонтали */
+    gap: 20px; /* Расстояние между блоками фильтров */
+    padding: 20px; /* Внутренние отступы для секции */
+    background-color: #fff; /* Белый фон */
+    border-radius: 10px; /* Скругленные края */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    max-width: 1350px; /* Ограничение ширины */
+    margin: 20px auto; /* Центрирование на странице */
+  }
+
+.filter h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+  
+input[type="range"] {
+    width: 100%;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+}
+
+.objects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+} 
+
+.object {
+    flex: 0 0 calc(33.33% - 20px); /*33.33% ширины родительского элемента - 20px (для учета отступа по правому краю) */
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease;
+    
+}
+
+.object h2 a {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.object:hover {
+    transform: scale(1.05);
+}
+
+.object img {
+    width: 100%; /* Изображение заполняет ширину контейнера */
+    height: 500px; /* Фиксированная высота контейнера */
+    object-fit: cover; /* Сохраняет пропорции изображения, обрезая излишки */
+    object-position: center; /* Центрирует изображение в пределах контейнера */
+}
+
+.objects h2 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.search {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 97%;
+}
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.filter {
+    flex: 1;
+    margin-right: 20px;
+}
+table {
+    width: 100%;
+}
+  
+table td {
+    padding: 5px;
+}
+.category-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+  
+.category-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+  
+.category-table label {
+     font-weight: normal; /*устанавливаем стандартную толщину шрифта для элемента*/
+}
+.buttonTop{
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgba(54, 73, 126, 0.4);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}

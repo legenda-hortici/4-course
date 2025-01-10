@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header-footer.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <title>BMW 3-series E36 | GarantMotors</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo"><a href="index.html"><img src="/img/logo.svg" width="50" height="50"></a><span>GarantMotors</span></div>
+      <nav>
+        <ul>
+          <li><a href="/pages/catalog.html">Каталог</a></li>
+          <li><a href="/pages/support.html">Поддержка</a></li>
+          <li><a href="/pages/aboutUs.html">Про нас</a></li>
+          <li><a href="/pages/news.html">Новости</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>BMW 3-series E36</h1>
+      <section class="product-images">
+        <div class="thumbnails">
+          <div class="image-sec">
+            <img src="/img/bmw_e36_4.png" width="200" height="100" alt="Фото авто">
+          </div>
+          <div class="image-sec">
+            <img src="/img/bmw_e36_2.png" width="200" height="100" alt="Фото авто">
+          </div>
+          <div class="image-sec">
+            <img src="/img/bmw_e36_3.png" width="200" height="100" alt="Фото авто">
+          </div>
+          <div class="image-sec">
+            <img src="/img/bmw_e36_5.png" width="200" height="100" alt="Фото авто">
+          </div>
+        </div>
+      
+        <div class="image-main">
+          <img src="/img/bmw_e36_1.png" width="300" height="200" alt="Основное фото авто">
+        </div>
+        <div id="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center;">
+          <span class="close" style="position: absolute; top: 10px; right: 10px; font-size: 24px; color: white; cursor: pointer;">&times;</span>
+          <img id="modal-img" src="" alt="Modal Image" style="max-width: 90%; max-height: 90%;">
+        </div>
+      </section>
+
+      <section class="container">
+        <!-- Составление заявки -->
+        <div id="orderModal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeOrderModal()">&times;</span>
+            <p>Оформление заявки</p>
+            <form id="order-form" method="post" onsubmit="submitOrder(event)">
+              <!-- Имя пользователя -->
+              <div class="input-box">
+                <label for="user-name">Имя:</label>
+                <input
+                  type="text"
+                  name="user-name"
+                  id="user-name"
+                  class="input"
+                  placeholder="Введите ваше имя"
+                  required
+                />
+              </div>
+
+              <!-- Электоронная почта -->
+              <div class="input-box">
+                <label for="email">Электоронная почта:</label>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  class="input"
+                  placeholder="Введите электронную почту"
+                  required
+                />
+              </div>
+
+              <!-- Адрес доставки -->
+              <div class="input-box">
+                <label for="country">Страна:</label>
+                <select
+                  name="country"
+                  id="country"
+                  class="input"
+                  required
+                  onchange="updateCities()"
+                >
+                  <option value="russia">Россия</option>
+                  <option value="belarus">Беларусь</option>
+                </select>
+                <label for="city">Город:</label>
+                <select name="city" id="city" class="input" required>
+                  <option value="">Выберите город</option>
+                  <option value="moscow">Москва</option>
+                  <option value="petersburg">Санкт-Петербург</option>
+                  <option value="moscow">Самара</option>
+                </select>
+              </div>
+
+              <!-- Телефон -->
+              <div class="input-box">
+                <label for="user-phone">Телефон:</label>
+                <input
+                  type="text"
+                  name="user-phone"
+                  id="user-phone"
+                  class="input"
+                  placeholder="+7 (___) ___-__-__"
+                  required
+                />
+                <small class="hint">Пример: +79123456789</small>
+              </div>
+
+              <!-- Подтверждение заказа -->
+              <div class="input-checkbox">
+                <input
+                  type="checkbox"
+                  name="order-check"
+                  id="order-check"
+                  class="check"
+                  required
+                />
+                <label class="checkboxLabel" for="order-check">Подтвердить обработку персональных данных</label>
+              </div>
+
+              <!-- Кнопка подтверждения заказа -->
+              <button class="button" type="submit" id="submit-order-button">
+                Отправить заявку
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div
+          id="orderConfirmation"
+          class="confirmation-modal"
+          style="display: none"
+        >
+          <div class="confirmation-content">
+            <p>Ваша заявка успешно отправлена!</p>
+            <p id="order-summary"></p>
+            <p>Ожидайте, с вами свяжется наш менеджер</p>
+            <button onclick="closeConfirmation()">Закрыть</button>
+          </div>
+        </div>
+
+        <div class="equipment">
+          <h2>Комплектация BMW 3-series E36</h2>
+          <ul>
+            <li>Кожаный или тканевый салон</li>
+            <li>Многофункциональная приборная панель</li>
+            <li>Аудиосистема с CD/кассетным проигрывателем</li>
+            <li>Кондиционер или климат-контроль</li>
+            <li>Электропривод зеркал и стеклоподъемников</li>
+            <li>Литые диски</li>
+            <li>Антиблокировочная система (ABS)</li>
+            <li>Подушки безопасности для водителя и пассажира</li>
+            <li>Противотуманные фары</li>
+            <li>Спортивная подвеска (в спортивных версиях)</li>
+          </ul>
+          <p>Цена: 1 550 000 руб.</p>
+        </div>
+
+        <div class="description">
+          <h2>Описание BMW 3-series E36</h2>
+          <p>BMW 3-series E36 — это автомобиль, который стал культовым благодаря сочетанию стиля, динамики и практичности. 
+            Эта модель, выпускавшаяся с начала 1990-х годов, предлагает сбалансированный дизайн, высокую надежность и 
+            удовольствие от вождения. Машина завоевала популярность как среди автолюбителей, так и среди экспертов, 
+            оставаясь востребованной на вторичном рынке. Благодаря своим характеристикам, E36 стала основой для 
+            многих доработок и тюнинга, что делает её отличным выбором для ценителей автомобильной классики. 
+            Автомобиль выделяется разнообразием комплектаций, которые позволяют подобрать оптимальный вариант для каждого водителя. 
+            Его управляемость и сбалансированное шасси делают E36 идеальной машиной как для городских условий, так и для спортивной езды. 
+            Кроме того, простота обслуживания и доступность запчастей позволяют владельцам минимизировать затраты на содержание. 
+            BMW E36 — это больше, чем просто средство передвижения, это символ эпохи и образец инженерного искусства.</p>
+        </div>
+      </section>
+      
+      <div class="application">
+        <p>Хотите узнать больше или приобрести BMW 3-series E36? Оставьте заявку, и мы свяжемся с вами!</p>
+        <button class="apply-button" type="button" id="apply_now" onclick="openOrderModal()">Оставить заявку</button>
+      </div>
+
+      <div class="reviews">
+        <h2>Отзывы владельцев BMW 3-series E36</h2>
+        <div class="review">
+          <p>"E36 — это идеальное сочетание комфорта и динамики. Машина доставляет удовольствие от вождения каждый день!"</p>
+          <p>Алексей, <span class="review-date">12.11.2024</span></p>
+        </div>
+        <div class=review>
+          <p>"Надёжность, стиль и возможность тюнинга делают её лучшим выбором для автолюбителей."</p>
+          <p>Иван, <span class="review-date">8.10.2024</span></p>
+        </div>
+        <div class="review">
+          <p>"Купил E36 два года назад, и она до сих пор радует. Отличная управляемость и низкие расходы на обслуживание."</p>
+          <p>Сергей, <span class="review-date">5.09.2024</span></p>
+        </div>
+        <div class="button-wrapper">
+          <button class="show-more">Показать еще</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="foot">
+        <p style="font-weight: bold;">Контакты</p>
+        <p>Адрес: улица, город, страна</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+        <p>Email: info@example.com</p>
+      </div>
+      <div class="foot">
+        <p style="font-weight: bold;">Социальные сети</p>
+        <ul>
+          <li><a href="#">VK</a></li>
+          <li><a href="#">Telegram</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <p style="font-weight: bold;">Рабочее время</p>
+        <p>Пн-Пт: 9:00 - 18:00</p>
+        <p>Сб-Вс: выходной</p>
+      </div>
+    </footer>
+
+    <script src="/js/full_screen.js"></script>
+    <script src="/js/cart.js"></script>
+  </body>
+</html>

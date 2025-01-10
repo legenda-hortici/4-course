@@ -1,0 +1,78 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    border-radius: 8px; /* Закругление углов */
+}
+
+.text {
+    flex: 1 1 60%;
+    padding-right: 20px;
+    max-width: 100%;
+}
+
+.text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.text p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.text ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.text ul li {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.statistics {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.stat-block {
+    background-color: #ffffff;
+    border: 2px solid #ff5722;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 16px;
+    color: #333;
+}
+  
+  
