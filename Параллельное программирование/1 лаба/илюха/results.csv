@@ -1,0 +1,12 @@
+Size, Windows Threads Time,OpenMP Time,Sequential Time
+600,0.230584,0.0853543,0.351172
+Size, Windows Threads Time,OpenMP Time,Sequential Time
+840,0.696452,0.253685,1.25985
+Size, Windows Threads Time,OpenMP Time,Sequential Time
+984,0.782938,0.544993,1.96173
+Size, Windows Threads Time,OpenMP Time,Sequential Time
+1128,1.05916,0.621085,2.8985
+Size, Windows Threads Time,OpenMP Time,Sequential Time
+1488,5.43021,3.3509,9.23486
+Size, Windows Threads Time,OpenMP Time,Sequential Time
+1992,13.0131,8.81132,28.1593
